@@ -22,7 +22,7 @@ export default async function RootLayout({ children }) {
         <div className="navbar">
           <div>
             <Link href="/" className="logo">dailyforum</Link>
-            <Link href="/list">List</Link>
+            <Link href="/write">글쓰기</Link>
           </div>
           <div>
             {session !== null ?

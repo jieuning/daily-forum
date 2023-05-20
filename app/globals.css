@@ -1,3 +1,4 @@
+/* 공용 클래스 */
 a {
   text-decoration: none;
   color: #333;
@@ -8,12 +9,49 @@ body {
   color: #333;
 }
 
+input {
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background: lightgray;
+  border: none;
+  border-radius: 5px;
+}
+
+/* 메인 navbar */
+.navbar {
+  background: rgb(237, 237, 237);
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* 메인 리스트 */
 .list-bg {
   background: rgb(249, 250, 255);
   padding: 10px;
 }
 
 .list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: white;
   border-radius: 10px;
   padding: 20px;
@@ -34,42 +72,73 @@ body {
   margin: 5px 0px;
 }
 
-.p-20 {
-  padding: 20px;
-}
-
-input {
-  box-sizing: border-box;
-  padding: 10px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 15px;
-  background: lightgray;
-  border: none;
-  border-radius: 5px;
-}
-
-.navbar {
-  background: rgb(237, 237, 237);
-  padding: 20px;
+.edit-menu {
   display: flex;
+  gap: 15px;
+}
+
+.edit-menu span {
+  cursor: pointer;
+}
+
+/* 디테일 페이지 */
+.detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* 쓰기, 수정 페이지 */
+.p-20 {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
-.navbar a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: black;
+.p-20 h4 {
+  font-size: 20px;
+  width: 80%;
 }
 
-.logo {
-  font-weight: bold;
+.p-20 form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: 1px solid #333;
 }
 
+.txt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+}
+
+.write-title {
+  border: 1px solid #ebecef;
+  margin-top: 30px;
+}
+
+.write-title::placeholder {
+  color: #ccc;
+}
+
+.write-content {
+  box-sizing: border-box;
+  word-wrap: break-all;
+  padding: 20px;
+  min-height: 300px;
+  max-height: none;
+  border: 1px solid #ebecef;
+}
+
+.write-content::placeholder {
+  color: #ccc;
+}
+
+/* 유저 관련 */
 .signout {
   display: flex;
   align-items: center;

@@ -11,8 +11,8 @@ export default async function Edit(props) {
             <h4>수정하기</h4>
             {/* form 태그를 이용하면 get요청을 쉽게 할 수 있다.(POST, GET만 가능)*/}
             <form action="/api/post/edit" method="POST">
-                <input name="title" defaultValue={result.title} />
-                <input name="content" defaultValue={result.content} />
+                <input className="write-title txt" name="title" defaultValue={result.title} />
+                <textarea className="write-content txt" name="content" defaultValue={result.content} />
                 <input style={{display:"none"}} name="_id" defaultValue={result._id.toString()} />
                 <button type="submit">수정하기</button>
             </form>

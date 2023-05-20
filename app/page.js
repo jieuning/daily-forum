@@ -1,12 +1,16 @@
-import { MongoClient } from "mongodb"
-import { connectDB } from "@/util/database"
+import { connectDB } from "@/util/database";
+import ListItem from "./listItem";
 
-export default async function Home() {
+export const dynamic = 'force-dynamic'
+
+export default async function List() {
 
   const db = (await connectDB).db("daily-forum");
   let result = await db.collection('post').find().toArray();
 
   return (
-    <div>하이</div>
+    <div className="list-bg">
+      <ListItem result={result} />
+    </div>
   )
-}
+} 

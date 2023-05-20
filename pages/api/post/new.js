@@ -15,8 +15,8 @@ export default async function handler(요청, 응답) {
             return 응답.status(500).json('제목 입력 필수입니다.')
         }
         const db = (await connectDB).db("daily-forum");
-        let result = await db.collection('post').insertOne(요청.body);
+        await db.collection('post').insertOne(요청.body);
         // redirect - 응답이 완료되면 해당 경로로 이동
-        return 응답.redirect(302, '/list')
+        return 응답.redirect(302, '/')
     }
 }
